@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Olá</title>
-  </head>
-  <body>
-    <h1>Olá {{$nome}}</h1>
+@extends('template')
 
-  </body>
-</html>
+@section('title')
+
+  Página de Notas
+
+@endsection
+
+@section('content')
+
+  Ola Sr. {{ $name }}. Sua nota é: {{ $nota }}
+
+@endsection
