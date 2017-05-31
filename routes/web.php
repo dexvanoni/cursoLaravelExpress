@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('teste/{nome}', 'TestController@index');
-Route::get('notas', 'TestController@notas');
+Route::get('notas/{name}', 'TestController@notas');

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap -->
-  <link href="bst/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/bst/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -16,7 +16,7 @@
       </h1>
     </div>
   </div>
-  <script src="bst/js/jquery.min.js"></script>
-  <script src="bst/js/bootstrap.min.js"></script>
+  <script src="/bst/js/jquery.min.js"></script>
+  <script src="/bst/js/bootstrap.min.js"></script>
 </body>
 </html>
