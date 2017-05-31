@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="col-md-12 col-xs-offset-4">
+    <div class="col-md-12">
       <h1>
         @yield('content')
       </h1>
