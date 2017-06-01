@@ -13,4 +13,7 @@
 
 
 Route::get('/', 'PostsController@index');
-Route::get('admin', 'PostsAdminController@index');
+
+Route::get('admin/posts', ['as' => 'admin.posts.index', 'uses' =>'PostsAdminController@index']);
+Route::get('admin/posts/create', ['as' => 'admin.posts.create', 'uses' =>'PostsAdminController@create']);
+Route::post('admin/posts/store', ['as' => 'admin.posts.store', 'uses' =>'PostsAdminController@store']);
