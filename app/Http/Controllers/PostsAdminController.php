@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 
 class PostsAdminController extends Controller
 {
@@ -25,11 +26,30 @@ class PostsAdminController extends Controller
 
   }
 
-  public function store(Request $request){
+  public function store(PostRequest $request){
 
     $this->post->create($request->all());
 
     return redirect()->route('admin.posts.index');
 
   }
+
+  public function edit($id){
+
+    $post = $this->post->find($id);
+    return view('admin.posts.edit', compact('post'));
+  }
+
+  public function update($id, PostRequest $request){
+
+    $this->post->find($id)->update($request->all());
+    return redirect()->route('admin.posts.index');
+  }
+
+  public function destroy($id){
+
+    $this->post->find($id)->delete();
+    return redirect()->route('admin.posts.index');
+  }
+
 }
